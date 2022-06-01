@@ -1,11 +1,14 @@
 import Layout from '@components/layout'
-import Items from './components/Items';
+import { LoadingProvider } from '@context/LoadingContext'
+import Items from './components/Items'
 
 const App = () => {
   return (
-    <Layout>
-      <Items />
-    </Layout>
+    <LoadingProvider>
+      <Layout>
+        <Items />
+      </Layout>
+    </LoadingProvider>
   )
 }
 

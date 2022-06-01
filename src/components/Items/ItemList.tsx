@@ -1,11 +1,16 @@
 import { Item as ItemInterface } from '@interfaces/Items';
-import Item from './Item';
+import EmptyList from './EmptyList';
+import Item from './Item'
 
 interface Props {
-  items: ItemInterface[];
+  items: ItemInterface[]
 }
 
 const ItemsList = ({ items }: Props) => {
+
+  if (!items.length)
+    return <EmptyList />
+
   return (
     <ul>
       {items.map(item => (

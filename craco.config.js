@@ -1,15 +1,15 @@
 const { CracoAliasPlugin } = require('react-app-alias')
-const { pathsToModuleNameMapper } = require('ts-jest');
-const { compilerOptions } = require('./tsconfig.paths.json');
+const { pathsToModuleNameMapper } = require('ts-jest')
+const { compilerOptions } = require('./tsconfig.paths.json')
 
-const options = {} 
+const options = {}
 
 module.exports = {
   plugins: [
     {
       plugin: CracoAliasPlugin,
-      options
-    }
+      options,
+    },
   ],
   jest: {
     configure: {

@@ -1,5 +1,12 @@
-import { itemsMock } from '@mocks/items'
+import { render, screen } from '@testing-library/react'
+import { LoadingProvider } from '@context/LoadingContext'
 
-test('import with alias', () => {
-  expect(itemsMock).toEqual(itemsMock)
+test("must show loading", () => {
+  render(
+    <LoadingProvider>
+      <p>loading...</p>
+    </LoadingProvider>
+  )
+
+  expect(screen.getByText(`loading...`)).toBeInTheDocument()
 })
