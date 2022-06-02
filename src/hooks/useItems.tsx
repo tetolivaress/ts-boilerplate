@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react"
-import { getItemsMock } from '@api/itemMockDB';
+import { getItemsMock } from '@services/itemsService';
 import { Item as ItemInterface } from '@interfaces/Items';
 import { useLoading } from "./useLoading";
 
