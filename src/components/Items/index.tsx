@@ -1,8 +1,10 @@
-import { itemsMock } from "@mocks/items"
+import { useItems } from "@hooks/useItems"
 import ItemsList from "./ItemList"
 
 const Items = () => {
-  const activeItemsMock = itemsMock.filter(({ isActive }) => isActive)
+  const { items } = useItems()
+
+  const activeItemsMock = items.filter(({ isActive }) => isActive)
   return <ItemsList items={activeItemsMock} />
 }
 
