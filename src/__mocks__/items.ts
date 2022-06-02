@@ -1,4 +1,4 @@
-import { Item as ItemInterface } from '@interfaces/Items';
+import { ItemInterface } from '@interfaces/Items';
 
 export const itemsMock: ItemInterface[] = [
   {

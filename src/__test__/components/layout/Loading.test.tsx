@@ -1,12 +1,9 @@
 import Loading from '@components/layout/Loading';
 import { render, screen } from '@testing-library/react';
+import { createLoadingContainer } from '@utils/tests/createLoadingContainer';
 
 // Create portal element before all tests so that it does not throw error
-beforeAll(() => {
-  const portalRoot = document.createElement('div')
-  portalRoot.setAttribute('id', 'loading')
-  document.body.appendChild(portalRoot)
-})
+beforeAll(createLoadingContainer)
 
 test('Render null content when open prop set to false', () => {
   render(<Loading open={false} children={<p></p>}/>)

@@ -1,18 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks'
 import { useLoading } from '@hooks/useLoading'
-import { LoadingProvider } from '@context/LoadingContext'
-
-interface Props {
-  children: JSX.Element | JSX.Element[]
-}
-
-const Wrapper = ({ children }: Props) => {
-  return (
-    <LoadingProvider>
-      {children}
-    </LoadingProvider>
-  )
-}
+import { Wrapper } from '@utils/tests/LoadingWrapper'
 
 it('Should show loading', () => {
   const { result } = renderHook(useLoading, {wrapper: Wrapper})
