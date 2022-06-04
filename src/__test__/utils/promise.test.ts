@@ -1,5 +1,5 @@
-import { itemsMock } from '@mocks/items'
+import { sleep } from "@utils/promise";
 
-test('import with alias', () => {
-  expect(itemsMock).toEqual(itemsMock)
+it('should return a number',async () => {
+  await expect(sleep(9)).resolves.toBe(undefined)
 })
