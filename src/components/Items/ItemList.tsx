@@ -3,7 +3,7 @@ import EmptyList from './EmptyList';
 import Item from './Item'
 
 interface Props {
-  items: ItemInterface[]
+  items: ItemInterface[] 
 }
 
 const ItemsList = ({ items }: Props) => {
