@@ -1,6 +1,6 @@
 import { ItemInterface } from '@interfaces/Items';
-import EmptyList from './EmptyList';
-import Item from './Item'
+import EmptyList from './EmptyList'
+import Item from './Item';
 
 interface Props {
   items: ItemInterface[] 
