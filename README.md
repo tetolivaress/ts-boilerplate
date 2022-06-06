@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Git hooks config
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Install husky
+|   $ npx husky install
+
 
 ## Available Scripts
 
