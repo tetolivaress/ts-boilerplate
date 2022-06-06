@@ -52,6 +52,6 @@
     "ts-jest": "^28.0.3"
   },
   "lint-staged": {
-    "/src/*": "prettier --write"
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
