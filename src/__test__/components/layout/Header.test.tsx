@@ -1,6 +1,5 @@
-
-import Header from '@components/layout/Header';
-import { render, screen } from '@testing-library/react';
+import Header from '@components/layout/Header'
+import { render, screen } from '@testing-library/react'
 
 test('Should render header', () => {
   render(<Header />)

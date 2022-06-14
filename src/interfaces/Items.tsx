@@ -1,6 +1,6 @@
 export interface ItemInterface {
-  id: number;
-  name: string;
-  description: string;
-  isActive: boolean;
+  id: number
+  name: string
+  description: string
+  isActive: boolean
 }

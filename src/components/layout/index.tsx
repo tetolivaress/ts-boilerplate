@@ -4,11 +4,10 @@ import Loading from './Loading'
 import { useLoading } from '@hooks/useLoading'
 
 interface Props {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[]
 }
 
 const Layout = ({ children }: Props) => {
-  
   const { isLoading } = useLoading()
   return (
     <div>

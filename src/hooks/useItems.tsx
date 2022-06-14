@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from "react"
-import { getItemsMock } from '@services/itemsService';
-import { ItemInterface } from '@interfaces/Items';
-import { useLoading } from "./useLoading";
+import { useState, useEffect, useCallback } from 'react'
+import { getItemsMock } from '@services/itemsService'
+import { ItemInterface } from '@interfaces/Items'
+import { useLoading } from './useLoading'
 
 export const useItems = () => {
   const [items, setItems] = useState<ItemInterface[]>([])

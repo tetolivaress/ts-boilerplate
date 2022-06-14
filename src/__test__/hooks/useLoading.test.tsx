@@ -3,7 +3,7 @@ import { useLoading } from '@hooks/useLoading'
 import { Wrapper } from '@utils/tests/LoadingWrapper'
 
 it('Should show loading', () => {
-  const { result } = renderHook(useLoading, {wrapper: Wrapper})
+  const { result } = renderHook(useLoading, { wrapper: Wrapper })
   expect(result.current.isLoading).toBeFalsy()
 
   act(() => {
@@ -11,11 +11,10 @@ it('Should show loading', () => {
   })
 
   expect(result.current.isLoading).toBeTruthy()
-
 })
 
 it('Should hide loading', () => {
-  const { result } = renderHook(useLoading, {wrapper: Wrapper})
+  const { result } = renderHook(useLoading, { wrapper: Wrapper })
   act(() => {
     result.current.showLoading()
   })

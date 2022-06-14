@@ -1,5 +1,4 @@
-import { ItemInterface } from "@interfaces/Items"
-
+import { ItemInterface } from '@interfaces/Items'
 
 interface Props {
   item: ItemInterface
@@ -8,8 +7,8 @@ interface Props {
 const Item = ({ item }: Props) => {
   return (
     <>
-    <p>{item.name}</p>
-    <p>{item.description}</p>
+      <p>{item.name}</p>
+      <p>{item.description}</p>
     </>
   )
 }

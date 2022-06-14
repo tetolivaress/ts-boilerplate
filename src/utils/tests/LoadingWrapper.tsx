@@ -5,9 +5,5 @@ interface Props {
 }
 
 export const Wrapper = ({ children }: Props) => {
-  return (
-    <LoadingProvider>
-      {children}
-    </LoadingProvider>
-  )
+  return <LoadingProvider>{children}</LoadingProvider>
 }

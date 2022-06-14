@@ -1,6 +1,5 @@
-
-import Footer from '@components/layout/Footer';
-import { render, screen } from '@testing-library/react';
+import Footer from '@components/layout/Footer'
+import { render, screen } from '@testing-library/react'
 
 test('Should render footer', () => {
   render(<Footer />)

@@ -1,50 +1,53 @@
 const supportsLocalStorage = () => {
   try {
-    return 'localStorage' in window && window['localStorage'] !== null;
+    return 'localStorage' in window && window.localStorage !== null
   } catch (e) {
-    return false;
+    return false
   }
-};
+}
 
 const getItem = (key: string): string | null => {
   if (supportsLocalStorage()) {
-    return localStorage.getItem(key);
+    return localStorage.getItem(key)
   }
-  return null;
-};
+  return null
+}
 
 const getItemAndRemove = (key: string): string | null => {
   if (supportsLocalStorage()) {
-    const value = localStorage.getItem(key);
-    localStorage.removeItem(key);
-    return value;
+    const value = localStorage.getItem(key)
+    localStorage.removeItem(key)
+    return value
   }
-  return null;
-};
+  return null
+}
 
 const removeItem = (key: string) => {
   if (supportsLocalStorage()) {
-    localStorage.removeItem(key);
+    localStorage.removeItem(key)
   }
-};
+}
 
 const getObjectItem = (key: string): Record<string, unknown> => {
   if (supportsLocalStorage()) {
-    return JSON.parse(localStorage.getItem(key) || '{}');
+    return JSON.parse(localStorage.getItem(key) || '{}')
   }
-  return {};
-};
+  return {}
+}
 const setObjectItem = (key: string, value: Record<string, unknown>) => {
   if (supportsLocalStorage()) {
-    localStorage.setItem(key, JSON.stringify({ ...getObjectItem(key), ...value }));
+    localStorage.setItem(
+      key,
+      JSON.stringify({ ...getObjectItem(key), ...value })
+    )
   }
-};
+}
 
 const setItem = (key: string, value: string) => {
   if (supportsLocalStorage()) {
-    localStorage.setItem(key, value);
+    localStorage.setItem(key, value)
   }
-};
+}
 
 const localStorage = {
   getItemAndRemove,
@@ -52,7 +55,7 @@ const localStorage = {
   getObjectItem,
   setObjectItem,
   getItem,
-  setItem,
-};
+  setItem
+}
 
-export default localStorage;
+export default localStorage

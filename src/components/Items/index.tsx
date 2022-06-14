@@ -1,5 +1,5 @@
-import { useItems } from "@hooks/useItems"
-import ItemsList from "./ItemList"
+import { useItems } from '@hooks/useItems'
+import ItemsList from './ItemList'
 
 const Items = () => {
   const { items } = useItems()

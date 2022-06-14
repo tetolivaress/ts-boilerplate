@@ -1,8 +1,8 @@
-import ItemList from '@components/Items/ItemList';
-import { render, screen } from '@testing-library/react';
-import { itemsMock } from '@mocks/items';
+import ItemList from '@components/Items/ItemList'
+import { render, screen } from '@testing-library/react'
+import { itemsMock } from '@mocks/items'
 
-//https://stackoverflow.com/questions/57435680/whats-the-idiomatic-way-of-testing-a-list-with-dynamic-content-using-react-test
+// https://stackoverflow.com/questions/57435680/whats-the-idiomatic-way-of-testing-a-list-with-dynamic-content-using-react-test
 
 describe('DummyList', () => {
   it('render the items', async () => {
@@ -33,7 +33,9 @@ describe('DummyList', () => {
     const listItems = screen.getAllByRole('listitem')
     expect(listItems).toHaveLength(1)
     listItems.forEach((_, index) => {
-      expect(screen.getByText(inactiveItemsMock[index].name)).toBeInTheDocument()
+      expect(
+        screen.getByText(inactiveItemsMock[index].name)
+      ).toBeInTheDocument()
     })
   })
 })

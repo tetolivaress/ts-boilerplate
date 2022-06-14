@@ -1,20 +1,20 @@
 import { createContext, useCallback, useState } from 'react'
 
 export interface LoadingContextProps {
-    isLoading: boolean;
-    showLoading: () => void;
-    hideLoading: () => void;
+  isLoading: boolean
+  showLoading: () => void
+  hideLoading: () => void
 }
 
-export const LoadingContext = createContext( {} as LoadingContextProps )
+export const LoadingContext = createContext({} as LoadingContextProps)
 
 interface LoadingProviderProps {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[]
 }
 
-export const LoadingProvider = ({ children }: LoadingProviderProps ) => {
+export const LoadingProvider = ({ children }: LoadingProviderProps) => {
   const [isLoading, setIsLoading] = useState(false)
-  
+
   const showLoading = useCallback(() => {
     setIsLoading(true)
   }, [])
@@ -24,12 +24,14 @@ export const LoadingProvider = ({ children }: LoadingProviderProps ) => {
   }, [])
 
   return (
-    <LoadingContext.Provider value={{
-      isLoading,
-      showLoading,
-      hideLoading,
-    }}>
-      { children }
+    <LoadingContext.Provider
+      value={{
+        isLoading,
+        showLoading,
+        hideLoading
+      }}
+    >
+      {children}
     </LoadingContext.Provider>
   )
 }

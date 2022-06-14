@@ -1,6 +1,6 @@
-import Item from '@components/Items/Item';
+import Item from '@components/Items/Item'
 import { render, screen } from '@testing-library/react'
-import { itemsMock } from '@mocks/items';
+import { itemsMock } from '@mocks/items'
 
 // test('Should throw error since no item is provided', () => {
 //   const item = { id: null, title: null, description: null }

@@ -1,4 +1,4 @@
-import { ItemInterface } from '@interfaces/Items';
+import { ItemInterface } from '@interfaces/Items'
 
 export const itemsMock: ItemInterface[] = [
   {
@@ -16,7 +16,8 @@ export const itemsMock: ItemInterface[] = [
   {
     id: 3,
     name: 'some',
-    description: 'Necessitatibus voluptate rerum rerum perferendis tempora tempore.',
+    description:
+      'Necessitatibus voluptate rerum rerum perferendis tempora tempore.',
     isActive: true
   }
 ]
