@@ -14,7 +14,6 @@ node_modules
 
 # production
 /build
-/src/service_worker.ts
 
 # misc
 .DS_Store
