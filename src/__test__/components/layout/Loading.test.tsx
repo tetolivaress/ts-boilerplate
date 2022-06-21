@@ -6,13 +6,21 @@ import { createLoadingContainer } from '@utils/tests/createLoadingContainer'
 beforeAll(createLoadingContainer)
 
 test('Render null content when open prop set to false', () => {
-  render(<Loading open={false} children={<p></p>} />)
+  render(
+    <Loading open={false}>
+      <p></p>
+    </Loading>
+  )
   const loadingElement = screen.queryByText(/loading.../i)
   expect(loadingElement).toBeFalsy()
 })
 
 test('Render loading when open prop set to true', () => {
-  render(<Loading open={true} children={<span>Loading...</span>} />)
+  render(
+    <Loading open={true}>
+      <span>Loading...</span>
+    </Loading>
+  )
   const loadingElement = screen.queryByText(/loading.../i)
   expect(loadingElement).toBeInTheDocument()
 })
