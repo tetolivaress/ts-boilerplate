@@ -3,5 +3,5 @@ export interface ItemInterface {
   name: string
   description: string
   isActive: boolean
-  image?: string
+  image?: string | File
 }

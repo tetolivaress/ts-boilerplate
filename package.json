@@ -55,9 +55,10 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.30.0",
+    "husky": "^8.0.0",
+    "jest-canvas-mock": "^2.4.0",
     "react-app-alias": "^2.2.0",
-    "ts-jest": "^28.0.3",
-    "husky": "^8.0.0"
+    "ts-jest": "^28.0.3"
   },
   "lint-staged": {
     "**/*": "prettier --write --ignore-unknown"

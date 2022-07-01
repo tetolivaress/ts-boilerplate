@@ -8,15 +8,15 @@ module.exports = {
   plugins: [
     {
       plugin: CracoAliasPlugin,
-      options,
-    },
+      options
+    }
   ],
   jest: {
     configure: {
       preset: 'ts-jest',
       moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-        prefix: '<rootDir>/src/',
-      }),
-    },
-  },
+        prefix: '<rootDir>/src/'
+      })
+    }
+  }
 }
